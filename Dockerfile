@@ -5,8 +5,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install -y git git-lfs curl ddd valgrind cmake vim sudo lsb-release wget gnupg
-RUN apt-get install -y mesa-utils xserver-xorg-video-all
+RUN apt-get install -y git git-lfs curl ddd valgrind cmake vim sudo lsb-release wget gnupg libgazebo11-dev
 RUN apt-get clean all
 
 RUN useradd -ms /bin/bash $USR
